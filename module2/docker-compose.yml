@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  front:
+    build: front
+    network_mode: host
+    depends_on:
+      - workout-gateway
+
+  workout-gateway:
+    build: workout-gateway
+    network_mode: host
+    depends_on:
+      - run-controller
+
+  run-controller:
+    build: run-controller
+    network_mode: host
