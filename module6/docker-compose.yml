@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  front:
+    image: carvedrockfitness/front:v1.3    
+    build: front
+    ports:
+      - 127.0.0.1:3000:3000
+    environment:
+      REACT_APP_BACKEND_URL: http://localhost:9000
+    depends_on:
+      - workout-gateway
+    networks:
+      - frontend 
+
+  workout-gateway:
+    image: carvedrockfitness/workout-gateway:v1.3    
+    build: workout-gateway
+    ports:
+      - 127.0.0.1:9000:9000
+    environment:
+      RUN_CONTROLLER_URL: http://run-controller:8000
+    depends_on:
+      - run-controller
+    networks:
+      - frontend 
+      - backend 
+
+  run-controller:
+    image: carvedrockfitness/run-controller:v1.3    
+    build: run-controller
+    networks:
+      - backend 
+
+networks:
+  backend:
+  frontend:

@@ -53,13 +53,13 @@ app.get('/health', (req, res) => {
 })
 
 function main() {
-  const port = process.env.PORT
+  const port = process.env.PORT || 8000
 
   if (process.env.DEBUG)
     logger.level = "debug"
 
-  app.listen(port, () => {
-    console.log(`App listening at http://localhost:${port}`)
+  app.listen(port, '0.0.0.0', () => {
+    console.log(`App listening at http://0.0.0.0:${port}`)
   })
 }
 

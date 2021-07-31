@@ -1,0 +1,22 @@
+{
+  "name": "run-controller",
+  "version": "1.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "PORT=4040 DEBUG=1 nodemon main.js"
+  },
+  "keywords": [],
+  "author": "Grzegorz Kupczyk",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

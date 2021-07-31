@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  node-15.14:
+    image: carvedrockfitness/front:node-15.14.0
+    build:
+      context: .
+      args:
+        RT_VERSION: 15.14.0
+  node-14.16:
+    image: carvedrockfitness/front:node-14.16.0
+    build:
+      context: .
+      args:
+        RT_VERSION: 14.16.0
+  node-latest:
+    image: carvedrockfitness/front:node-latest
+    build:
+      context: .
+      args:
+        RT_VERSION: latest
