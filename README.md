@@ -3,7 +3,7 @@
 This repository is for the Pluralsight course Developing Node.js Apps with Docker. The license is Apache 2.0.
 
 [![Course overview
-screenshot](https://user-images.githubusercontent.com/695373/150931855-1084feb8-fba1-4450-a25e-b897b45d5a82.png)](https://doomhammer.info//l/courses/nodejs-docker-developing-apps)
+screenshot](https://user-images.githubusercontent.com/695373/150931855-1084feb8-fba1-4450-a25e-b897b45d5a82.png)](https://doomhammer.info/l/courses/nodejs-docker-developing-apps)
 
 ## Table of Contents
 
